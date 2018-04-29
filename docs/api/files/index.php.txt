@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tarea 06 - DAW Oscar Fernández Rodríguez</title>
+    </head>
+    <body>
+    <?php
+	
+	/**
+	* Ficheiro que mostra a clase <b>Prestamo</b> .
+	*
+	* Mostra as súas propiedades, construtor e métodos.
+	*
+	* @package OFR
+	* @license https://creativecommons.org/licenses/by-sa/4.0/legalcode Creative Commons 4.0 Attributioin ShareAlike
+	* @author Oscar Fernández Rodríguez <ue143504@edu.xunta.es>
+	* @version Version 1
+	*/
+		// Metemos el archivo clase.php
+       include "clase.php";
+	   //Metemos la cantidad del prestamo
+	   $cantidad=1000.50;
+	   // Creamos la clase del prestamo
+	   $nuevo= new Prestamo($cantidad);
+	   //Probamos el setter
+	   $nuevo->setCantidad(2000);
+	   echo "<h1>Tarea DAW 06- Oscar Fernández:</h1>";
+	   echo "<h2>El prestamo tiene las siguientes condiciones:</h2>";
+	   //Probamos la constante
+	   echo "</p>Interes: ".$nuevo::INTERES."%</p>";
+	   //Probamos el getter
+	   echo "<p>Cantidad: ".$nuevo->getCantidad()."€</p>";
+	   //Probamos os outros métodos
+	   echo '<h2>¿La palabra "oso" es palindromo?</h2>';
+       echo "<p>".$nuevo->esPalindromo("oso")."</p>";  
+	   echo '<h2>¿Es primo el numero 9?</h2>';
+       echo "<p>".$nuevo->esPrimo(9)."</p>"; 
+	   echo '<h2>¿Que numero es mayor el 9 o el 3?</h2>';
+       echo "<p>".$nuevo->esMayor(3,9)."</p>"; 
+	   echo '<h2>¿Cúal es la solucion a la ecuacion 3x+9=0?</h2>';
+       echo "<p>".$nuevo->ecuacionPrimerGrado(3,9)."</p>"; 
+	   echo '<h2>¿Es bisiesto el año 2000?</h2>';
+       echo "<p>".$nuevo->esBisiesto(2000)."</p>"; 	           
+    ?>
+    </body>
+</html>
